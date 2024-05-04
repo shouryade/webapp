@@ -28,7 +28,7 @@ pipeline {
         }
         stage('Sonar-Report') {
             steps {
-                sh 'mvn clean install sonar:sonar -Dsonar.host.url=http://localhost:9000 -Dsonar.analysis.mode=publish'
+                sh 'mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=shouryade_webapp'
             }
         }
     }
