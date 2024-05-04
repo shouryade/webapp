@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        label 'master || built-in'
+        label 'master || Jenkins-Build-Slave || built-in'
     }
     stages {
         stage('Build') {
