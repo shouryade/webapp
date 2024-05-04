@@ -28,5 +28,11 @@ pipeline {
                 }
             }
         }
+        stage('Deploy') {
+            steps {
+                sh 'echo "Deploying the application"'
+                sh 'sh /var/deployment/./deployment.sh'
+            }
+        }
     }
 }
