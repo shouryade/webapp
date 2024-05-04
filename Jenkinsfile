@@ -21,6 +21,7 @@ pipeline {
         }
         stage('Sonar-Report') {
             steps {
+                sh 'export SONAR_TOKEN=0f4710bc83ed3dcde89fd96948660417042b1479'
                 sh 'mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=shouryade_webapp'
             }
         }
